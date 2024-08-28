@@ -13,6 +13,9 @@ for all documentation I've created with Markdown.
     - /Networking
         - /Cisco
             - /Firewall
+                - /ASA
+                    - /5508-X
+                        - unseparated commands for [Cisco ASA 5508-X Firewall](/Computer%20Science/Networking/Cisco/Firewall/ASA/5508-X/ASA%205508-X.md)
             - /Router
                 - /Integrated Services Router
                     - /1921-K9
