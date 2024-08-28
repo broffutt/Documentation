@@ -9,9 +9,6 @@ for all documentation I've created with Markdown.
 
 ## Table of Contents (Exhaustive)
 
-> [!NOTE]
-> The `/Docs/` path is purely for jekyll rendering on the [github.io](https://broffutt.github.io/Documentation/) site due to its weird rendering syntax.
-
 - /Computer Science
     - /Networking
         - /Cisco
