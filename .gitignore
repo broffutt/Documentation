@@ -1,3 +1,7 @@
 
 # ignore jeckyll for now...
 _config.yml
+
+
+# Ignore temp file path until ready to push
+temp
