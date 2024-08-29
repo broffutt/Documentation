@@ -20,6 +20,7 @@ for all documentation I've created with Markdown.
                 - /Integrated Services Router
                     - /1921-K9
                         - /config
+                            - [`config dhcp` subcommands](/Computer%20Science/Networking/Cisco/Router/Integrated%20Services%20Router/1921-K9/config/config%20dhcp.md)
                             - [`config ip` subcommands](/Computer%20Science/Networking/Cisco/Router/Integrated%20Services%20Router/1921-K9/config/config%20ip.md)
                             - [`config router` subcommands](/Computer%20Science/Networking/Cisco/Router/Integrated%20Services%20Router/1921-K9/config/config%20router.md)
                         - /enable
@@ -28,7 +29,9 @@ for all documentation I've created with Markdown.
                         - [`enable` commands](/Computer%20Science/Networking/Cisco/Router/Integrated%20Services%20Router/1921-K9/enable.md)
                         - [`exec` commands](/Computer%20Science/Networking/Cisco/Router/Integrated%20Services%20Router/1921-K9/exec.md)
             - /Switch
+                - [`enable` commands](/Computer%20Science/Networking/Cisco/Switch/enable.md)
             - /Wireless Acess Point
+            - [Cisco Glossary](/Computer%20Science/Networking/Cisco/cisco-glossary.md)
         - /Ubiquiti
             - /UniFi
                 - /Wireless Access Point

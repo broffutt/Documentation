@@ -29,7 +29,7 @@ ROUTER(config)#ip <subcommand>
 | default-network | Flags networks as candidates for default routes |
 | device | Device tracking |
 | dfp | DFP configuration |
-| dhcp | Configure DHCP server and relay parameters |
+| `dhcp` | Configure DHCP server and relay parameters |
 | dhcp-client | Configure parameters for DHCP client operation |
 | dhcp-server | Specify target DHCP server parameters |
 | dns | Configure DNS server for a zone |
@@ -105,6 +105,110 @@ ROUTER(config)#ip <subcommand>
 | verify | URPF SNMP trap and IP packet header validation command |
 | vrf | Configure an IP VPN Routing/Forwarding instance |
 | wccp | Web-Cache Coordination Protocol IPv4 Commands |
+
+## `ip dhcp`
+
+```
+ROUTER(config)#ip dhcp <sub-command>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| aaa | Configure aaa attributes |
+| binding | DHCP address bindings |
+| bootp | BOOTP specific configuration |
+| class | Configure DHCP classes |
+| compatibility | Compatibility configuration |
+| conflict | DHCP address conflict parameters |
+| database | Configure DHCP database agents |
+| debug | DHCP debugs specific parameters |
+| excluded-address | Prevent DHCP from assigning certain addresses |
+| global-options | Configure global DHCP options |
+| limit | Limit DHCP Lease |
+| limited-broadcast-address | Use all 1's broadcast address |
+| ping | Specify ping parameters used by DHCP |
+| pool | Configure DHCP address pools |
+| relay | DHCP relay agent parameters |
+| remember | Remember released bindings |
+| smart-relay | Enable Smart Relay feature |
+| snooping | DHCP Snooping |
+| support | Configure support for certain features |
+| update | Configure dynamic updates |
+| use | Configure use of certain parameters during allocation |
+
+### `ip dhcp pool`
+
+```
+ROUTER(config)#ip dhcp <LINE>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| LINE | Pool Name |
+
+`ip dhcp <LINE>` takes you to [`ROUTER(dhcp-config)#`](/Computer%20Science/Networking/Cisco/Router/Integrated%20Services%20Router/1921-K9/config/config%20dhcp.md)
+
+
+## `ip dns`
+
+```
+ROUTER(config)#ip dns <sub-command>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| name-list | Regular expression name-list |
+| primary | Configure primary DNS server |
+| server | Enable DNS server |
+| spoofing | Configure DNS Spoofing |
+| view | Configure a DNS view |
+| view-list | Configure a DNS view-list |
+
+### `ip dns primary`
+
+```
+ROUTER(config)#ip dns primary <domain-name: WORD> soa <server-name: WORD> <contact-email: WORD> [refresh-time: int (0-429496725)] [refresh-retry-time: int (0-4294967295)] [authority-expire-time: int (0-4294967295)] [min-ttl: int (0-4294967295)]
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| soa | Configure Start of Authority record parameters |
+
+| OPTIONS | Description |
+| ------- | ----------- |
+| domain-name (WORD) | DNS domain name |
+| server-name (WORD) | DNS Primary name server (name of the dns server being configured. CAN include the domain name) |
+| contact-email (WORD) | DNS mailbox of responsible person |
+| refresh-time (0-429496725) | Refresh time (in seconds) |
+| refresh-retry-time (0-429496725) | Refresh retry time (in seconds) |
+| authority-expire-time (0-429496725) | Authority expire time (in seconds) |
+| min-ttl (0-429496725) | Minimum TTL for zone info (in seconds) |
+
+
+
+### `ip dns server`
+
+```
+ROUTER(config)#ip dns server <sub-command | cr>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| queue | Configure queue parameters |
+| view-group | Configure a DNS view-list for global use on this system |
+| [`<cr>`](/Computer%20Science/comp_sci-glossary.md#newline) | Enables the Primary DNS server |
+
+## `ip name-server`
+
+```
+ROUTER(config)#ip name-server <OPTION | sub-command>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| A.B.C.D | Domain server IPv4 address (maximum of 6) |
+| X:X:X:X::X | Domain server IPv6 address (maximum of 6) |
+| vrf | Specify VRF |
 
 ## `ip route`
 
