@@ -11,16 +11,16 @@ See: [`config ip dhcp pool`](/Computer%20Science/Networking/Cisco/Router/Integra
 
 |  Sub Command  | Description |
 | ------------- | ----------- |
-| accounting | Send Accounting Start/Stop messages |
+| [`accounting`](#accounting) | Send Accounting Start/Stop messages |
 | bootfile | Boot file name |
 | class | Specify a DHCP class |
 | client-identifier | Client identifier |
 | client-name | Client name |
 | [`default-router`](#default-router) | Default routers |
-| dns-server | DNS servers |
-| domain-name | Domain name |
+| [`dns-server`](#dns-server) | DNS servers |
+| [`domain-name`](#domain-name) | Domain name |
 | exit | Exit from DHCP Pool Configuration Mode |
-| hardware-address | Client hardware address |
+| `hardware-address` | Client hardware address |
 | host | Client IP address and mask |
 | import | Programatically importing DHCP option parameters |
 | lease | Address lease time |
@@ -41,7 +41,22 @@ See: [`config ip dhcp pool`](/Computer%20Science/Networking/Cisco/Router/Integra
 | utilization | Configure various utilization parameters |
 | vrf | Associate this pool with a VRF |
 
+## `accounting`
+
+Configure the default router provided to DHCP clients.
+
+```
+ROUTER(dhcp-config)# accounting <accounting-list-name: WORD>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| accounting-list-name (WORD) | Named Accounting list |
+
+
 ## `default-router`
+
+Configure the default router provided to DHCP clients.
 
 ```
 ROUTER(dhcp-config)# default-router <Hostname | A.B.C.D>
@@ -50,3 +65,44 @@ ROUTER(dhcp-config)# default-router <Hostname | A.B.C.D>
 |  Sub Command  | Description |
 | ------------- | ----------- |
 | Hostname or [A.B.C.D](/Computer%20Science/Networking/Cisco/cisco-glossary.md#abcd) | Router's name or IP address |
+
+## `dns-server`
+
+Specify DNS servers for dhcp clients to use.
+
+Multiple dns-servers can be provided as alternates.
+
+```
+ROUTER(dhcp-config)# dns-server <Hostname or A.B.C.D>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| Hostname or [A.B.C.D](/Computer%20Science/Networking/Cisco/cisco-glossary.md#abcd) | Server's name or IP address |
+
+## `domain-name`
+
+Specify the domain name associated with the DHCP server
+
+```
+ROUTER(dhcp-config)# domain-name <domain-identifier: WORD>
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| domain-identifier (WORD) | Domain name |
+
+
+## `hardware-address`
+
+```
+ROUTER(dhcp-config)# hardware-address <mac-address: dotted-hex (WORD)> [arp-hw-type: int (0-255)]
+```
+
+|  Sub Command  | Description |
+| ------------- | ----------- |
+| mac-address (WORD) | Dotted-hexadecimal string (aabb.ccdd.eeff ...) |
+
+|  Options  | Description |
+| ------------- | ----------- |
+| arp-hw-type (0-255) | ARP hardware type from ["Assigned Numbers" RFC](https://www.rfc-editor.org/rfc/rfc3232) |
