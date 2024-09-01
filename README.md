@@ -54,3 +54,8 @@ I very much appreciate RFCs, so I'll adopt these concepts
                 - /Wireless Access Point
                     - [U7 Pro CLI](/Computer%20Science/Networking/Ubiquiti/UniFi/Wireless%20Access%20Point/U7-Pro%20CLI.md)
         - [Networking Terms](/Computer%20Science/Networking/networking-terms.md)
+
+### testing
+
+new [ASA-5508-X](/Documentation/Computer%20Science/Networking/Cisco/Firewall/ASA/5508-X/5508-x.md)
+newnew [ASA-5508-X](./Computer%20Science/Networking/Cisco/Firewall/ASA/5508-X/5508-x.md)
