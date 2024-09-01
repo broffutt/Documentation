@@ -13,3 +13,24 @@
 | quit | Exit from the EXEC |
 | [`show`](#show) | Show running system information |
 | traceroute | Trace route to destination |
+
+
+## C
+
+- clear
+
+## E
+
+## H
+
+## L
+
+## N
+
+## P
+
+## Q
+
+## S
+
+## T

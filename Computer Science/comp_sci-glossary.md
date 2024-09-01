@@ -1,5 +1,8 @@
 # Glossary of Computer Science Terminology
 
+References:
+    - [Abbreviations Galore](https://www.rfc-editor.org/rpc/wiki/doku.php?id=abbrev_list)
+
 ## Table of Contents
 
 - [N](#n)

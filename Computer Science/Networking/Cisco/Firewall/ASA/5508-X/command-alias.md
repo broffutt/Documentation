@@ -1,0 +1,4 @@
+
+cfg
+
+Create command alias

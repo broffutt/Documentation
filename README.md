@@ -3,9 +3,18 @@
 Documentation created by me for everything I've interacted with,
 to the extent it's occured to me to do so.
 
-The file structure will probably be refactored a number of times as
-the scope of its contents grows. This will be meant to be a "one-stop-shop"
-for all documentation I've created with Markdown.
+Also, I will reference outside resources as frequently as I can.
+The contents of this repo are majorly things I have personally
+implemented or found interesting enough to document for retention
+purposes. Otherwise, the outside resources are referenced for
+additional reading, if so desired.
+
+The file structure will probably be refactored a number of times
+as the scope of its contents grows. This will be meant to be a
+"one-stop-shop" for all documentation I've created with Markdown.
+
+I very much appreciate RFCs, so I'll adopt these concepts
+(link to be added once more clearly articulated).
 
 ## Table of Contents (Exhaustive)
 

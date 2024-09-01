@@ -1,0 +1,4 @@
+
+cfg
+
+Configure management interface

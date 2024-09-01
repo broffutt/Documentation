@@ -1,0 +1,4 @@
+
+cfg
+
+Set FTP mode
