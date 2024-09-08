@@ -1,7 +1,13 @@
 # Terminology Glossary for Networking
 
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) |
+[I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) |
+[Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) |
+[Y](#y) | [Z](#z)
+
 ## Table of Contents
 
+- [A](#a)
 - [B](#b)
     - [BOOTP](#bootp)
 - [D](#d)
@@ -10,6 +16,16 @@
     - [Name Server](#name-server)
 - [S](#s)
     - [Subnet Mask](#subnet-mask)
+
+## A
+
+### Access Port
+
+An access port refers to a switch port providing access to a single VLAN, where
+the frames are not tagged with an 802.1Q header.  Normal client-type devices are
+connected to access ports, which will comprise the majority of switch ports.
+Devices on access ports do not need knowledge of VLANs or tagging.  They see the
+network on their port the same way they would a switch without VLANs.
 
 ## B
 
@@ -26,6 +42,8 @@ Bootstrap Protocol
 > The document "DHCP Options and BOOTP Vendor Information Extensions"
 > [RFC2132](https://www.iana.org/go/rfc2132) describes options for
 > DHCP, some of which can also be used with BOOTP.
+
+## C
 
 ## D
 
@@ -88,25 +106,69 @@ a multiple of 4.
    +-----+-----+-----+-----+-----+-----+-----+-----+--
 ```
 
-## 
-## 
-## 
-## 
-## 
-## 
-## 
-## 
+## E
+
+## F
+
+## G
+
+## H
+
+## I
+
+## J
+
+## K
+
+## L
+
+## M
+
 ## N
 
 ### Name Server
 
+## O
 
+## P
 
-## 
-## 
-## 
-## 
-## 
+### Parent Interface
+
+The physical interface where a VLAN resides is known as its Parent Interface.
+For example, igb0 or igc0.  When VLANs are configured on pfSense, each is
+assigned a virtual interface.  The virtual interface named is crafted by
+combining the parent interface plus the VLAN ID.  For example, for VLAN 20 on
+igb0, the interface name is "igb0_vlan20".
+
+> [!NOTE]
+> The sole function of the parent interface is, ideally, to be the parent for
+> the defined VLANs and not used directly.  In some situations this will work,
+> but can cause difficulties with switch configuration, and it requires use of
+> the default VLAN on the trunk port, which is best to avoid.
+
+### Private VLAN (PVLAN)
+
+PVLAN, sometimes called Port Isolation, refers to capabilities of some switches
+to segment hosts within a single VLAN.  Normally hosts within a single VLAN
+function the same as hosts on a single switch without VLANs configured.  PVLAN
+provides a means of preventing hosts on a VLAN from talking to any other host on
+that VLAN, only permitting communication between that host and its default
+gateway.  Switch functionality such as this is the only way to prevent
+communication between hosts in the same subnet.  Without a function like PVLAN,
+no network firewall can control traffic within a subnet because it never touches
+the default gateway.
+
+## Q
+
+### QinQ (Double Tagging)
+
+QinQ refers to the double tagging of traffic, using both an outer and inner
+802.1Q tag.  This can be useful in large ISP environments, other very large
+networks, or networks that must carry multiple VLANs across a link that only
+supports a single VLAN tag.  Triple tagging is also possible.
+w
+## R
+
 ## S
 
 ### Subnet Mask
@@ -188,11 +250,44 @@ For example:
         and -1,297,728,000 corresponds to 00:00 17 Nov 1858 GMT.
 ```
 
-## 
-## 
-## 
-## 
-## 
-## 
-## 
-## 
+### Trunking
+
+Trunking refers to a means of carrying multiple VLANs on the same physical port
+switch.  The frames leaving a trunk port are marked with an 802.1Q tag in the
+header, enabling the connected device to differentiate between multiple VLANs.
+Trunk ports are used to connect multiple switches, and for connecting any
+devices that are capable of 802.1Q tagging and require access to multiple VLANs.
+This is commonly limited to the firewall or router providing connectivity
+between VLANs, as well as any connections to other switches containing multiple
+VLANs.
+
+Reference: [pfSense Documentation](https://docs.netgate.com/manuals/pfsense/en/latest/the-pfsense-documentation.pdf)
+
+## U
+
+## V
+
+### VLAN ID
+
+Each VLAN has an identifier number (ID) for distinguishing tagged traffic. This is a number between 1 and 4094.
+
+> [!WARNING] The default VLAN on switches is 1, and this VLAN should not be
+> used when deploying VLAN trunking.
+
+Aside from avoiding the use of VLAN 1, VLAN numbers may be chosen at will.  Some
+designs start with VLAN 2 and increment by one until the number of VLANs is
+reached.  Another common design is to use the third octet in the subnet of the
+VLAN as the VLAN ID.
+
+For example, if the environment contains the network `10.0.10.0/24`,
+`10.0.20.0/24`, and `10.0.30.0/24`, it is logical to use VLANs 10, 20, and 30
+respectively.  Choose a VLAN ID assignment scheme that makes sense for a given
+network design.
+
+## W
+
+## X
+
+## Y
+
+## Z

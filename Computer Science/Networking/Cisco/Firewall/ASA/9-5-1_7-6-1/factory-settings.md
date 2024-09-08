@@ -205,3 +205,19 @@ Cryptochecksum:<REDACTED>
 : end
 [OK]
 ```
+
+### Default SSH
+
+After a factory reset, there is a Key-Pair that is automatically generated
+called `<Default-RSA-Key>`.
+
+```
+ciscoasa(config)# show crypto key mypubkey rsa
+Key pair was generated at: 21:24:03 UTC Jun 27 2018
+Key name: <Default-RSA-Key>
+ Usage: General Purpose Key
+ Modulus Size (bits): 2048
+ Key Data:
+
+  <REDACTED>
+```
